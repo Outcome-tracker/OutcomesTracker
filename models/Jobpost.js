@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const jobpostSchema = new Schema ({
 
-    
+    //schema details
 
 
 }, 
