@@ -9,7 +9,7 @@ const mongoose     = require('mongoose');
 const logger       = require('morgan');
 const path         = require('path');
 const session      = require('express-session');
-const mongoStore   = require('connect-mongo')(session);
+const MongoStore   = require('connect-mongo')(session);
 
 
 mongoose
@@ -37,12 +37,17 @@ app.use(cookieParser());
 
 app.use(
   session({
-    secret: 'keyboard cat',
+    secret: process.env.SECRET,
     resave: false,
     saveUninitialized: true,
-    cookie: { secure: true }
-  })
-);
+    cookie: { maxAge: 3600000 },
+    store: new MongoStore({
+      mongooseConnection: mongoose.connection,
+      ttl: 24 * 60 * 60 // 1 day
+      })
+    })
+  );
+
 
 // Express View engine setup
 
