@@ -1,8 +1,8 @@
 //Modelo de usuario
 
 const mongoose = require("mongoose");
-
 const Schema = mongoose.Schema;
+const passportLocalMongoose = require ("passport-local-mongoose");
 
 const administratorSchema = new Schema(
 
@@ -32,5 +32,8 @@ const administratorSchema = new Schema(
 
   { timestamps: true }
 );
+
+//plugin
+administratorSchema.plugin(passportLocalMongoose)
 
 module.exports = mongoose.model("Administrator", administratorSchema);
