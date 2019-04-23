@@ -37,11 +37,12 @@ app.use(cookieParser());
 
 app.use(
   session({
-    secret: 'process.env.SECRET',
+    secret: 'keyboard cat',
     resave: false,
     saveUninitialized: true,
     cookie: { secure: true }
-})
+  })
+);
 
 // Express View engine setup
 
