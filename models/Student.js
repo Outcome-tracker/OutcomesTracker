@@ -22,16 +22,19 @@ const studentSchema = new Schema(
       unique: true
     },
 
-    password: {
+    password:{
       type: String,
       required: true
     },
     
-    group: {
+    group:{
       type: String,
       required: true
     },
-
+    image:{
+      type: [String]
+      required: true
+    }
   },
 
   { timestamps: true }
