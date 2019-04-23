@@ -32,6 +32,17 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
+
+//Cookies.secure
+
+app.use(
+  session({
+    secret: 'process.env.SECRET',
+    resave: false,
+    saveUninitialized: true,
+    cookie: { secure: true }
+})
+
 // Express View engine setup
 
 app.use(require('node-sass-middleware')({
