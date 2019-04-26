@@ -12,12 +12,17 @@ router.get("/register", (req, res) => {
 
 //Creacion de rutas para recibir la data y utilizamos passport local mongoose
 router.post("/register", (req, res) => {
-  User.register(req.body).then(user => {
-    console.log(user);
-  })
-  .catch(err => {
-    res.render("auth-form", { err });
-  }) 
+  const { password } = req.body;
+  delete req.body.password;
+
+  User.register(req.body, password)
+    .then(user => {
+      console.log(user);
+    })
+    .catch(err => {
+      console.log(err);
+      res.render("auth-form", { err, action: "Register" });
+    }); 
 });
 
 module.exports = router;

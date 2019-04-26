@@ -29,7 +29,6 @@ const userSchema = new Schema(
     
     group:{
       type: String,
-      required: true
     },
     
     image:{
