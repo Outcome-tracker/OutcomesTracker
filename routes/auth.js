@@ -13,14 +13,15 @@ router.get("/register", (req, res) => {
 //Creacion de rutas para recibir la data y utilizamos passport local mongoose
 router.post("/register", (req, res) => {
   const { password } = req.body;
-  delete req.body.password;
+  /*delete req.body.password;*/
 
   User.register(req.body, password)
-    .then(user => {
-      console.log(user);
+    .then(() /*user*/ => {
+      /*console.log(user);*/ 
+      res.redirect("/login");
     })
     .catch(err => {
-      console.log(err);
+      /*console.log(err);*/
       res.render("auth-form", { err, action: "Register" });
     }); 
 });
