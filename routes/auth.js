@@ -7,10 +7,11 @@ router.get("/login", (req, res) => {
 });
 
 router.get("/register", (req, res) => {
-  res.render("auth-form", { action: "Register"});
+  res.render("auth-form");
 })
 
 //Creacion de rutas para recibir la data y utilizamos passport local mongoose
+
 router.post("/register", (req, res) => {
   const { password } = req.body;
   /*delete req.body.password;*/

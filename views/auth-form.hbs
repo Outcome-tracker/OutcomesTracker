@@ -1,15 +1,33 @@
-<section class="uk-flex uk-flex-center">
+<section class="uk-section">
   <div class="uk-container">
     <div class="uk-flex uk-flex-center">
-      <form action="/auth/register" class="uk-text-center" method="POST">
-        <h2>{{action}}</h2>
+      <div class="uk-flex uk-flex-center  uk-width-1-3">
+         
+      <form 
+       {{#if action}} action="/auth/login" 
+       {{else}} action="/auth/register" 
+       {{/if}} class="uk-text-center" method="POST">
 
+
+       <h2 class=" uk-flex uk-flex-center">
+          {{#if action}}
+          {{action}}
+          {{else}}
+          Register
+          {{/if}}
+        </h2>
+      
+      
+       
+
+          {{#unless action}}
           <div class="uk-margin">
             <div class="uk-inline">
               <span class="uk-form-icon" uk-icon="icon: user"></span>
               <input name="name" class="uk-input" type="text" placeholder="Enter your name">
             </div>
-          </div> 
+          </div>
+          {{/unless}}
 
           <div class="uk-margin">
             <div class="uk-inline">
@@ -20,20 +38,30 @@
 
           <div class="uk-margin">
             <div class="uk-inline">
-                <span class="uk-form-icon" uk-icon="icon: lock"></span>
-                <input name="password" class="uk-input" type="password" placeholder="Ironhackerpassword">
+              <span class="uk-form-icon" uk-icon="icon: lock"></span>
+              <input name="password" class="uk-input" type="password" placeholder="Enter your password">
             </div>
           </div>
 
           {{#if err.message}}
-            <div class="uk-alert-danger" uk-alert>
-              <p>{{err.message}}</p>
-            </div>
+          <div class="uk-alert-danger uk-width-1-3 uk-margin-auto" uk-alert>
+            <p>{{err.message}}</p>
+          </div>
           {{/if}}
 
-        <button class="uk-button uk-button-primary">{{action}}</button>
+          <button class="uk-button uk-button-primary">
+            {{#if action}}
+            {{action}}
+            {{else}}
+            Register
+            {{/if}}
+          </button>
 
-      </form>
+        </form>
+
+       
+      </div>
     </div>
+
   </div>
 </section>
