@@ -76,9 +76,11 @@ app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
 app.locals.title = 'Outcomes Tracker';
 
 
-
+// se agrega la ruta de auth 
 const index = require('./routes/index');
+const auth = require ('./routes/auth');
 app.use('/', index);
+app.use('/auth',auth);
 
 
 module.exports = app;
