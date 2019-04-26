@@ -1,11 +1,10 @@
 const mongoose = require("mongoose")
-
 const Schema =  mongoose.Schema;
 
 const userSchema = new Schema(
 
   {
-    student: String,
+    username: String, 
 
     name:{
       type: String,
@@ -31,6 +30,7 @@ const userSchema = new Schema(
       type: String,
       required: true
     },
+    
     image:{
       type: [String],
       required: true
