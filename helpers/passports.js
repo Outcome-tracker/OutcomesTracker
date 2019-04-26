@@ -1,9 +1,9 @@
 const passport = require("passport");
-const Administrator = require("../models/Administrator");
+const User = require("../models/User");
 
-passport.use(new LocalStrategy(Administrator.authenticate()));
+passport.use(new LocalStrategy(User.authenticate()));
 
-passport.serializeUser(user.serializeUser());
-passport.deserializeUser(user.deserializeUser());
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
 
 
