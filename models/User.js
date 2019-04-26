@@ -44,7 +44,7 @@ const userSchema = new Schema(
 //poner cual sera el campo para inicar sesion y el campo del hash de la contarseña
 userSchema.plugin(passportLocalMongoose, { 
   usernameField: "email", 
-  hashField: "password"
+  hashField:     "password"
 });
 
 module.exports = mongoose.model("User", userSchema);

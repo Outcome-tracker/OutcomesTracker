@@ -13,6 +13,7 @@ const MongoStore   = require('connect-mongo')(session);
 const passport     = require('./helpers/passports');
 
 
+
 mongoose
   .connect('mongodb://localhost/outcomestracker', {useNewUrlParser: true})
   .then(x => {
@@ -49,7 +50,7 @@ app.use(
     })
   );
 
-//Middleware use passport
+//Middleware use passport, metodo. Estas lineas deben ir siempre debajo de cookies
 
 app.use(passport.initialize());
 app.use(passport.session());
