@@ -3,19 +3,33 @@
     <div class="uk-flex uk-flex-center">
       <form action="/auth/resgister" class="uk-text-center" method="POST">
         <h2>{{action}}</h2>
-        <div class="uk-margin">
-          <div class="uk-inline">
-            <span class="uk-form-icon" uk-icon="icon: user"></span>
-            <input name="name" class="uk-input" type="text" placeholder="Enter your name">
-          </div>
-        </div>
 
-        <div class="uk-margin">
-          <div class="uk-inline">
-              <span class="uk-form-icon" uk-icon="icon: lock"></span>
-              <input name="password" class="uk-input" type="password" placeholder="Ironhackerpassword">
+          <div class="uk-margin">
+            <div class="uk-inline">
+              <span class="uk-form-icon" uk-icon="icon: user"></span>
+              <input name="name" class="uk-input" type="text" placeholder="Enter your name">
+            </div>
+          </div> 
+
+          <div class="uk-margin">
+            <div class="uk-inline">
+              <span class="uk-form-icon" uk-icon="icon: mail"></span>
+              <input name="email" class="uk-input" type="email" placeholder="example@example.com">
+            </div>
           </div>
-        </div>
+
+          <div class="uk-margin">
+            <div class="uk-inline">
+                <span class="uk-form-icon" uk-icon="icon: lock"></span>
+                <input name="password" class="uk-input" type="password" placeholder="Ironhackerpassword">
+            </div>
+          </div>
+
+          {{#if err.message}}
+            <div class="uk-alert-danger uk-width-1-3 uk-margin-auto" uk-alert>
+              <p>{{err.message}}</p>
+            </div>
+          {{/if}}
 
         <button class="uk-button uk-button-primary">{{action}}</button>
 
