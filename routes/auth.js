@@ -22,12 +22,13 @@ router.post("/login", passport.authenticate("local",{
 
 router.post("/register", (req, res) => {
   const { password } = req.body;
+  console.log('el user',req.body)
   /*delete req.body.password;*/
 
   User.register(req.body, password)
     .then(() /*user*/ => {
       /*console.log(user);*/ 
-      res.redirect("/login");
+      res.redirect("/auth/login");
     })
     .catch(err => {
       /*console.log(err);*/
