@@ -14,10 +14,8 @@
 </head>
 <body>
 
-
-
  <!-- Navbar -->
-  <nav class="uk-navbar-container uk-navbar-transparent uk-text-bold uk-text-center" uk-navbar>
+  <nav class="uk-navbar-container uk-text-center uk-navbar-transparent uk-text-bold uk-text-center" uk-navbar>
 
     <div class="uk-navbar-left">
 
@@ -27,18 +25,19 @@
         </ul>
 
     </div>
+    
     <div class="uk-navbar-right">
-      <ul class="uk-navbar-nav">
-        <li><a href="/auth/login">Login</a></li>
-        <li><a href="/auth/register">Register</a></li>
-      </ul>
+        <ul class="uk-navbar-nav">
+          {{#unless user}}
+          <li><a href="/auth/login">Login</a></li>
+          <li><a href="/auth/register">Register</a></li>
+          {{else}}
+          <li><a href="/profile">{{user.name}}</a></li>
+          <li><a href="/auth/logout">Logout</a></li>
+          {{/unless}}
+        </ul>
     </div>
-
-  </nav>  
-
-  
-  
-
+  </nav>
 
   {{{body}}}
 
