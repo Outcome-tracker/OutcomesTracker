@@ -12,21 +12,21 @@
   <link rel="stylesheet" href="/stylesheets/style.css" />
 
 </head>
-<body>
+<body class="">
 
  <!-- Navbar -->
-  <nav class="uk-navbar-container uk-text-center uk-navbar-transparent uk-text-bold uk-text-center" uk-navbar>
+  <nav class="uk-grid uk-navbar-container uk-text-center uk-navbar-transparent uk-text-bold uk-text-center" uk-navbar>
 
     <div class="uk-navbar-left">
 
         <ul class="uk-navbar-nav">
-            <li class="uk-active"><a href="#">HOME</a></li>
+            <li class="uk-active"><a href="/auth/logout">HOME</a></li>
             <li><a href="#"></a></li>
         </ul>
 
     </div>
     
-    <div class="uk-navbar-right">
+    <div class="uk-grid uk-navbar-right">
         <ul class="uk-navbar-nav">
           {{#unless user}}
           <li><a href="/auth/login">Login</a></li>
