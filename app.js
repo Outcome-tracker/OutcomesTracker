@@ -8,10 +8,14 @@ const hbs          = require('hbs');
 const mongoose     = require('mongoose');
 const logger       = require('morgan');
 const path         = require('path');
+const session      = require('express-session');
+const MongoStore   = require('connect-mongo')(session);
+const passport     = require('./helpers/passports');
+
 
 
 mongoose
-  .connect('mongodb://localhost/outcomestracker', {useNewUrlParser: true})
+  .connect(process.env.DB, {useNewUrlParser: true})
   .then(x => {
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
   })
@@ -30,6 +34,28 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
+
+//Cookies.secure
+
+app.use(
+  session({
+    secret: process.env.SECRET,
+    resave: false,
+    saveUninitialized: true,
+    cookie: { maxAge: 3600000 },
+    store: new MongoStore({
+      mongooseConnection: mongoose.connection,
+      ttl: 24 * 60 * 60 // 1 day
+      })
+    })
+  );
+
+//Middleware use passport, metodo. Estas lineas deben ir siempre debajo de cookies
+
+app.use(passport.initialize());
+app.use(passport.session());
+
+
 // Express View engine setup
 
 app.use(require('node-sass-middleware')({
@@ -47,12 +73,16 @@ app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
 
 
 // default value for title local
-app.locals.title = 'Express - Generated with IronGenerator';
+app.locals.title = '';
 
 
-
+// se agrega la ruta de auth 
 const index = require('./routes/index');
+const auth = require ('./routes/auth');
+const profile =require('./routes/profile');
 app.use('/', index);
+app.use('/auth',auth);
+app.use('/profile', profile);
 
 
 module.exports = app;
