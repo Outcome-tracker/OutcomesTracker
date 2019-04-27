@@ -15,7 +15,7 @@ const passport     = require('./helpers/passports');
 
 
 mongoose
-  .connect('mongodb://localhost/outcomestracker', {useNewUrlParser: true})
+  .connect(process.env.DB, {useNewUrlParser: true})
   .then(x => {
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
   })

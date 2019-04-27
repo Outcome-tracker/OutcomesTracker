@@ -35,11 +35,20 @@ const userSchema = new Schema(
       type: [String],
       required: true
     },
+
     role:{
       type: String,
-      enum: ['ADMIN', 'STUDENT'],
-      default: 'GUEST'
-    }
+      enum: ['STUDENT','OUTCOMESLEAD','OUTCOMESMANAGER',],
+      default: 'STUDENT'
+    },
+    
+    campus: {
+      type: String,
+    },
+
+    squad: {
+      type:String
+    },
   },
 
   { timestamps: true }

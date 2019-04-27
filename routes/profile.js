@@ -1,6 +1,7 @@
 const express = require("express");
 const router  = express.Router();
 
+
 /* para ver la vista del usuario  */
 
 const isAuth = (req,res,next) => {
