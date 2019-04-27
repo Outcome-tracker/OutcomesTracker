@@ -22,6 +22,7 @@ router.post("/login", passport.authenticate("local",{
 
 router.post("/register", (req, res) => {
   const { password } = req.body;
+
   /*delete req.body.password;*/
 
   User.register(req.body, password)
