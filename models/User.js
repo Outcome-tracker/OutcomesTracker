@@ -32,8 +32,7 @@ const userSchema = new Schema(
     },
     
     image:{
-      type: [String],
-      required: true
+      type: String,
     },
 
     role:{
@@ -49,6 +48,8 @@ const userSchema = new Schema(
     squad: {
       type:String
     },
+
+    displayName: String
   },
 
   { timestamps: true }
