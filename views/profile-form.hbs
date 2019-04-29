@@ -4,14 +4,14 @@
 
       <div class="uk-flex uk-flex-center uk-width-auto">
         <div class="">
-          <img src="https://mcraestudios.com/wp-content/uploads/2018/10/McRae_icon_WordPress.png" alt="" width="170"
+          <img src="http://ijcat.com/images/Users-Edit-user-icon_large.png" alt="" width="170"
             height="170">
         </div>
       </div>
 
       <h2 class="uk-heading uk-flex uk-flex-center">Edit Profile</h2>
 
-      <!--se revisa que en la consola de navergador apunte la ruta correctamente-->
+      <!--se revisa que en la consola de navegador apunte la ruta correctamente-->
       <form action="/profile/{{user._id}}/edit" class="uk-text-center" enctype="multipart/form-data" method="POST">
 
 
@@ -26,8 +26,15 @@
         <div class="uk-margin">
           <div class="uk-inline">
             <span class="uk-form-icon" uk-icon="icon: user"></span>
-            <input name="lastname" class="uk-input" type="text" value="{{user.lastname}}"
-              placeholder="Enter your lastname">
+            <input name="lastname" class="uk-input" type="text" placeholder="Enter your lastname" value="{{user.lastname}}">
+          </div>
+        </div>
+
+
+        <div class="uk-margin">
+          <div class="uk-inline">
+            <span class="uk-form-icon" uk-icon="icon: mail"></span>
+            <input disabled name="email" class="uk-input" type="email" placeholder="Enter your lastname" value="{{user.email}}">
           </div>
         </div>
 
@@ -40,6 +47,7 @@
               <input class="uk-input uk-form-width-medium" type="text" placeholder="Profile picture" disabled>
             </div>
           </div>
+        </div>
 
 
           {{#if err.message}}
