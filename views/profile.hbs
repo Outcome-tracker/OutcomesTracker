@@ -1,4 +1,25 @@
-<div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+<section class="uk-section">
+    <div class="uk-container">
+        <div class="uk-grid-match uk-child-width-1-2" ok grid>
+            <div>
+                <div>
+                    {{#if user.image}}
+                    <img src="{{user.image}}" alt="{{user.name}}">
+                    {{else}}
+                    <img data-src="https://cdn4.iconfinder.com/data/icons/corporate-management-8/48/11-512.png" width="250" height="250" alt="" uk-img>
+                    {{/if}}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+<!---<div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
     <div class="uk-card-media-left uk-cover-container">
         <img src="http://www.agbrands.com.ar/wp-content/uploads/2017/01/perfil.jpg"" alt="" uk-cover>
         <canvas width="500" height="300"></canvas>
@@ -22,7 +43,7 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
         </div>
     </div>
-</div>
+</div>--->
 
 
 <!---div class="uk-card uk-card-default uk-width-1-2@m">
