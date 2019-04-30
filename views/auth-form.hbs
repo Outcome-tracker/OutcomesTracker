@@ -3,28 +3,26 @@
     <div class="uk-flex uk-flex-center">
       <div class="uk-flex uk-flex-center uk-flex-column uk-width-1-4">
 
-        <div class="uk-flex uk-flex-center uk-width-auto">
+        <div class="uk-flex uk-flex-center ">
           <div class="">
-            <img src="https://ph-files.imgix.net/43678140-24eb-418f-89ce-12459dd395f7?auto=format" alt="" width="170" height="170">
+            <img src="https://cdn-images-1.medium.com/max/1200/1*69RcxrWXuk385lSxkIYYLA.png" alt="" width="250"
+              height="250">
           </div>
         </div>
-         
+
 
         <!--se revisa que en la consola de navergador apunte la ruta correctamente-->
-      <form 
-       {{#if action}} action="/auth/login" 
-       {{else}} action="/auth/register" 
-       {{/if}} class="uk-text-center" method="POST">
+        <form {{#if action}} action="/auth/login" {{else}} action="/auth/register" {{/if}} class="uk-text-center"
+          method="POST">
 
 
-       <h2 class=" uk-flex uk-flex-center">
-          {{#if action}}
-          {{action}}
-          {{else}}
-          Register
-          {{/if}}
-        </h2>
-      
+          <h2 class=" uk-flex uk-flex-center">
+            {{#if action}}
+
+            {{else}}
+            {{/if}}
+          </h2>
+
 
           {{#unless action}}
           <div class="uk-margin">
@@ -65,7 +63,7 @@
 
         </form>
 
-       
+
       </div>
     </div>
 

@@ -32,14 +32,24 @@ const userSchema = new Schema(
     },
     
     image:{
-      type: [String],
-      required: true
+      type: String,
     },
+
     role:{
       type: String,
-      enum: ['ADMIN', 'STUDENT','GUEST'],
-      default: 'GUEST'
-    }
+      enum: ['STUDENT','OUTCOMESLEAD','OUTCOMESMANAGER',],
+      default: 'STUDENT'
+    },
+    
+    campus: {
+      type: String,
+    },
+
+    squad: {
+      type:String
+    },
+
+    displayName: String
   },
 
   { timestamps: true }

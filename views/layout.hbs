@@ -1,41 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="icon" href="https://ph-files.imgix.net/43678140-24eb-418f-89ce-12459dd395f7?auto=format">
+  <link rel="icon" href="https://cdn-images-1.medium.com/max/1200/1*69RcxrWXuk385lSxkIYYLA.png">
   <title>{{title}}</title>
-  
+
   <!-- UIkit CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.3/css/uikit.min.css" />
   <link rel="stylesheet" href="/stylesheets/style.css" />
 
 </head>
+
 <body class="">
 
- <!-- Navbar -->
+  <!-- Navbar -->
   <nav class="uk-grid uk-navbar-container uk-text-center uk-navbar-transparent uk-text-bold uk-text-center" uk-navbar>
 
     <div class="uk-navbar-left">
 
-        <ul class="uk-navbar-nav">
-            <li class="uk-active"><a href="/auth/logout">HOME</a></li>
-            <li><a href="#"></a></li>
-        </ul>
+      <ul class="uk-navbar-nav">
+        <li class="uk-active"><a href="/auth/logout">HOME</a></li>
+        <li><a href="#"></a></li>
+      </ul>
 
     </div>
-    
+
     <div class="uk-grid uk-navbar-right">
-        <ul class="uk-navbar-nav">
-          {{#unless user}}
-          <li><a href="/auth/login">Login</a></li>
-          <li><a href="/auth/register">Register</a></li>
-          {{else}}
-          <li><a href="/profile">{{user.name}}</a></li>
-          <li><a href="/auth/logout">Logout</a></li>
-          {{/unless}}
-        </ul>
+      <ul class="uk-navbar-nav">
+        {{#unless user}}
+        <li><a href="/auth/login">Login</a></li>
+        <li><a href="/auth/register">Register</a></li>
+        {{else}}
+        <li><a href="/profile">{{user.name}}</a></li>
+        <li><a href="/auth/logout">Logout</a></li>
+        {{/unless}}
+      </ul>
     </div>
   </nav>
 
@@ -47,9 +49,8 @@
   <script src="/javascripts/script.js"></script>
 
 
-  
+
 
 </body>
+
 </html>
-
-
