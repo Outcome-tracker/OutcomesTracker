@@ -18,6 +18,4 @@ router.get('/sboard-form', (req, res, next) => {
   res.render ('sboard-form');
 });
 
-
-
 module.exports = router;
