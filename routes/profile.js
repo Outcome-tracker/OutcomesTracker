@@ -18,6 +18,7 @@ const isAuth = (req, res, next) => {
 
 router.get("/", isAuth, (req, res) => {
     const { user } = req;
+    console.log(` conso`, user)
     res.render("profile", { user });
 });
 
