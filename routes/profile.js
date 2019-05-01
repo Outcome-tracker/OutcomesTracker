@@ -18,9 +18,11 @@ const isAuth = (req, res, next) => {
 
 router.get("/", isAuth, (req, res) => {
     const { user } = req;
-    console.log(` conso`, user)
     res.render("profile", { user });
 });
+
+
+
 
 //ruta para profile-perfil del usuario
 router.get("/:id/edit", isAuth, (req, res) => {
@@ -35,10 +37,21 @@ router.get("/:id/edit", isAuth, (req, res) => {
 });
 
 
+/*router.get("/", isAuth, (req, res) => {
+    const { user } = req;
+    res.render("student_board", { user });
+});
+
 //roles
 /*router.get('/private', checkRoles('OUTCOMESMANAGER'), (req, res) => {
     res.render('private', { user: req.user });
 });*/
+
+router.get("/", isAuth, (req, res) => {
+    const { user } = req;
+    res.render("profile", { user });
+});
+
 
 
 router.post("/:id/edit", isAuth, helpers.isAuth, uploader.single("image"), (req, res) => {
@@ -47,7 +60,7 @@ router.post("/:id/edit", isAuth, helpers.isAuth, uploader.single("image"), (req,
     //const { url: image } = req.files;
     const img = req.file ? req.file.url : undefined;
     const user = img ? {...req.body, img } : req.body
-    console.log('Queeee', user)
+    console.log('Que', user)
     User.findOneAndUpdate({ _id, email }, { $set: user })
         .then(() => {
             res.redirect("/profile");
