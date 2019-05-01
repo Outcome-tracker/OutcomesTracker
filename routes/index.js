@@ -10,9 +10,5 @@ router.get('/home', (req, res, next) => {
     res.render('home');
 });
 
-router.get('/student-board', (req, res, next) => {
-  res.render ('student-board');
-});
-
 
 module.exports = router;
