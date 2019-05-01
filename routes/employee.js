@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const Empleado = require("../models/Employee");
+const Employee = require("../models/Employee");
 
 const isAuth = (req, res, next) => {
     if (req.isAuthenticated()) {
@@ -28,7 +28,7 @@ router.get("/new", isAuth, checkRoles("OUTCOMESLEAD"), (req, res) => {
 });
 
 router.post("/new", (req, res) => {
-    Empleado.create(req.body)
+    Employee.create(req.body)
         .then(() => {
             res.redirect("/outcomeslead");
         });
@@ -36,7 +36,7 @@ router.post("/new", (req, res) => {
 
 router.get('/:id/edit', (req, res) => {
     let { id } = req.params;
-    Empleado.findById(id)
+    Employee.findById(id)
         .then(empleado => {
             res.render('employee-form', empleado);
         });
@@ -44,7 +44,7 @@ router.get('/:id/edit', (req, res) => {
 
 router.post('/:id/edit', (req, res) => {
     let { id } = req.params;
-    Empleado.findByIdAndUpdate(id, { $set: {...req.body } })
+    Employee.findByIdAndUpdate(id, { $set: {...req.body } })
         .then(empleado => {
             res.redirect('/outcomeslead');
         })
@@ -55,7 +55,7 @@ router.post('/:id/edit', (req, res) => {
 
 router.get('/:id/delete', (req, res) => {
     let { id } = req.params;
-    Empleado.findByIdAndDelete(id)
+    Employee.findByIdAndDelete(id)
         .then(() => {
             res.redirect('/outcomeslead');
         });

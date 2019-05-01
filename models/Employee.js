@@ -1,4 +1,4 @@
-/*const mongoose = require("mongoose");
+const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const employeeSchema = new Schema({
@@ -7,7 +7,9 @@ const employeeSchema = new Schema({
     role: {
         type: String,
         enum: ['OUTCOMESLEAD', 'OUTCOMESMANAGER'],
+        default: 'OUTCOMESLEAD'
+
     }
 }, { timestamps: true });
 
-module.exports = mongoose.model("employee", employeeSchema);*/
+module.exports = mongoose.model("employee", employeeSchema); * /
