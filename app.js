@@ -1,32 +1,32 @@
 require('dotenv').config();
 
-const bodyParser   = require('body-parser');
+const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
-const express      = require('express');
-const favicon      = require('serve-favicon');
-const hbs          = require('hbs');
-const mongoose     = require('mongoose');
-const logger       = require('morgan');
-const path         = require('path');
-const session      = require('express-session');
-const MongoStore   = require('connect-mongo')(session);
-const passport     = require('./helpers/passports');
-
+const express = require('express');
+const favicon = require('serve-favicon');
+const hbs = require('hbs');
+const mongoose = require('mongoose');
+const logger = require('morgan');
+const path = require('path');
+const session = require('express-session');
+const MongoStore = require('connect-mongo')(session);
+const passport = require('./helpers/passports');
+/*const checkRoles = require('/routes/profile');*/
 
 
 mongoose
-  .connect(process.env.DB, {useNewUrlParser: true})
-  .then(x => {
-    console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
-  })
-  .catch(err => {
-    console.error('Error connecting to mongo', err)
-  });
+    .connect(process.env.DB, { useNewUrlParser: true })
+    .then(x => {
+        console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
+    })
+    .catch(err => {
+        console.error('Error connecting to mongo', err)
+    });
 
 const app_name = require('./package.json').name;
 const debug = require('debug')(`${app_name}:${path.basename(__filename).split('.')[0]}`);
-
 const app = express();
+
 
 // Middleware Setup
 app.use(logger('dev'));
@@ -38,17 +38,30 @@ app.use(cookieParser());
 //Cookies.secure
 
 app.use(
-  session({
-    secret: process.env.SECRET,
-    resave: false,
-    saveUninitialized: true,
-    cookie: { maxAge: 3600000 },
-    store: new MongoStore({
-      mongooseConnection: mongoose.connection,
-      ttl: 24 * 60 * 60 // 1 day
-      })
+    session({
+        secret: process.env.SECRET,
+        resave: false,
+        saveUninitialized: true,
+        cookie: { maxAge: 3600000 },
+        store: new MongoStore({
+            mongooseConnection: mongoose.connection,
+            ttl: 24 * 60 * 60 // 1 day
+        })
     })
-  );
+);
+
+
+//Middleware Roles
+/*function checkRoles(role) {
+    return function(req, res, next) {
+        if (req.isAuthenticated() && req.user.role === role) {
+            return next();
+        } else {
+            res.redirect('/login')
+        }
+    }
+}*/
+
 
 //Middleware use passport, metodo. Estas lineas deben ir siempre debajo de cookies
 
@@ -56,14 +69,17 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 
+
+
+
 // Express View engine setup
 
 app.use(require('node-sass-middleware')({
-  src:  path.join(__dirname, 'public'),
-  dest: path.join(__dirname, 'public'),
-  sourceMap: true
+    src: path.join(__dirname, 'public'),
+    dest: path.join(__dirname, 'public'),
+    sourceMap: true
 }));
-      
+
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
@@ -78,10 +94,10 @@ app.locals.title = '';
 
 // se agrega la ruta de auth 
 const index = require('./routes/index');
-const auth = require ('./routes/auth');
-const profile =require('./routes/profile');
+const auth = require('./routes/auth');
+const profile = require('./routes/profile');
 app.use('/', index);
-app.use('/auth',auth);
+app.use('/auth', auth);
 app.use('/profile', profile);
 
 
