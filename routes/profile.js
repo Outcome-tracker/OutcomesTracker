@@ -26,22 +26,9 @@ router.get("/", isAuth, (req, res) => {
 
 
 //ruta para profile-perfil del usuario
-router.get("/:id/edit", isAuth, (req, res) => {
-    const { id } = req.params;
-    User.findById(id)
-        .then(user => {
-            res.render("profile-form", { user });
-        })
-        .catch(err => {
-            res.render("profile-form", { err });
-        });
-});
 
 
-/*router.get("/", isAuth, (req, res) => {
-    const { user } = req;
-    res.render("student_board", { user });
-});
+
 
 //roles
 /*router.get('/private', checkRoles('OUTCOMESMANAGER'), (req, res) => {
@@ -53,6 +40,17 @@ router.get("/", isAuth, (req, res) => {
     res.render("profile", { user });
 });
 
+
+router.get("/:id/edit", isAuth, (req, res) => {
+    const { id } = req.params;
+    User.findById(id)
+        .then(user => {
+            res.render("profile-form", { user });
+        })
+        .catch(err => {
+            res.render("profile-form", { err });
+        });
+});
 
 
 router.post("/:id/edit", isAuth, helpers.isAuth, uploader.single("image"), (req, res) => {

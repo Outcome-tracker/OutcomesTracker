@@ -96,11 +96,13 @@ app.locals.title = '';
 const index = require('./routes/index');
 const auth = require('./routes/auth');
 const profile = require('./routes/profile');
+const student = require("./routes/student-board");
 
 
 app.use('/', index);
 app.use('/auth', auth);
 app.use('/profile', profile);
+app.use("/student", student)
 
 
 
