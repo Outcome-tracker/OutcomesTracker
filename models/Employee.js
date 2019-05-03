@@ -12,6 +12,4 @@ const employeeSchema = new Schema({
     }
 }, { timestamps: true });
 
-
 module.exports = mongoose.model("employee", employeeSchema);
-
