@@ -2,8 +2,7 @@
   <div class="container">
     <div class="uk-width-2-3 uk-align-center">
       <div class="uk-card uk-card-default uk-padding">
-        <form class="uk-form-stacked">
-
+        <form class="uk-form-stacked" action="/sboard/{{this._id}}/edit" method="POST">
           <h3>Complete Your Student Card</h3>
 
           <div class="uk-margin">
@@ -17,7 +16,7 @@
           <div class="uk-margin">
             <label class="uk-form-label" for="form-stacked-text">Why did you do Ironhack?</label>
             <div class="uk-form-controls">
-              <input class="uk-input" id="form-stacked-text" type="text" placeholder="Some text...">
+              <input name="whatdo" class="uk-input" id="form-stacked-text" type="text" placeholder="Some text...">
             </div>
           </div>
 

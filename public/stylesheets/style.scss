@@ -1,6 +1,10 @@
-*{
+* {
   margin: 0;
   padding: 0;
+}
+
+* {
+  font-family: Roboto;
 }
 
 body {
@@ -8,14 +12,5 @@ body {
 }
 
 a {
-  color: #00B7FF;
-}
-
-
-#block{
-  display: block;
-}
-
-#inline{
-  display: inline;
+  color: #00b7ff;
 }

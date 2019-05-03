@@ -4,10 +4,6 @@ const User = require("../models/User");
 const uploader = require("../helpers/multer");
 const helpers = require("../helpers/function");
 
-
-
-/* para ver la vista del usuario  */
-
 const isAuth = (req, res, next) => {
     if (req.isAuthenticated()) {
         next();
@@ -18,40 +14,8 @@ const isAuth = (req, res, next) => {
 
 router.get("/", isAuth, (req, res) => {
     const { user } = req;
-    console.log(` conso`, user)
-    res.render("profile", { user });
+    res.render("sboard-form", { user });
 });
-
-
-
-
-//ruta para profile-perfil del usuario
-
-
-
-
-//roles
-/*router.get('/private', checkRoles('OUTCOMESMANAGER'), (req, res) => {
-    res.render('private', { user: req.user });
-});*/
-
-router.get("/", isAuth, (req, res) => {
-    const { user } = req;
-    res.render("profile", { user });
-});
-
-
-router.get("/:id/edit", isAuth, (req, res) => {
-    const { id } = req.params;
-    User.findById(id)
-        .then(user => {
-            res.render("profile-form", { user });
-        })
-        .catch(err => {
-            res.render("profile-form", { err });
-        });
-});
-
 
 router.post("/:id/edit", isAuth, helpers.isAuth, uploader.single("image"), (req, res) => {
     const { id: _id } = req.params;
@@ -62,10 +26,10 @@ router.post("/:id/edit", isAuth, helpers.isAuth, uploader.single("image"), (req,
     console.log('Que', user)
     User.findOneAndUpdate({ _id, email }, { $set: user })
         .then(() => {
-            res.redirect("/profile");
+            res.redirect("/student");
         })
         .catch(err => {
-            res.render("profile-form", { err });
+            res.render("sboard-form", { err });
         });
 });
 

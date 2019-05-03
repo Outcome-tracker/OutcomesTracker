@@ -13,7 +13,6 @@ const MongoStore = require('connect-mongo')(session);
 const passport = require('./helpers/passports');
 /*const checkRoles = require('/routes/profile');*/
 
-
 mongoose
     .connect(process.env.DB, { useNewUrlParser: true })
     .then(x => {
@@ -96,11 +95,15 @@ app.locals.title = '';
 const index = require('./routes/index');
 const auth = require('./routes/auth');
 const profile = require('./routes/profile');
+const student = require("./routes/student-board");
+const sboard = require("./routes/sboard-form");
 
 
 app.use('/', index);
 app.use('/auth', auth);
 app.use('/profile', profile);
+app.use("/student", student);
+app.use("/sboard", sboard);
 
 
 
