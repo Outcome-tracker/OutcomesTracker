@@ -13,7 +13,6 @@ const MongoStore = require('connect-mongo')(session);
 const passport = require('./helpers/passports');
 /*const checkRoles = require('/routes/profile');*/
 
-
 mongoose
     .connect(process.env.DB, { useNewUrlParser: true })
     .then(x => {
