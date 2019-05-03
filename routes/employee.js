@@ -23,14 +23,14 @@ function checkRoles(role) {
 
 
 
-router.get("/new", isAuth, checkRoles("OUTCOMESLEAD"), (req, res) => {
+router.get("/new", isAuth, checkRoles("OUTCOMESMANAGER"), (req, res) => {
     res.render("employee-form");
 });
 
 router.post("/new", (req, res) => {
     Employee.create(req.body)
         .then(() => {
-            res.redirect("/outcomeslead");
+            res.redirect("/outcomesmanager");
         });
 });
 
@@ -46,7 +46,7 @@ router.post('/:id/edit', (req, res) => {
     let { id } = req.params;
     Employee.findByIdAndUpdate(id, { $set: {...req.body } })
         .then(empleado => {
-            res.redirect('/outcomeslead');
+            res.redirect('/outcomesmanager');
         })
         .catch(err => {
             console.log(err);
@@ -57,7 +57,7 @@ router.get('/:id/delete', (req, res) => {
     let { id } = req.params;
     Employee.findByIdAndDelete(id)
         .then(() => {
-            res.redirect('/outcomeslead');
+            res.redirect('/outcomesmanager');
         });
 });
 
