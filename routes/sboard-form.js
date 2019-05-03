@@ -14,22 +14,8 @@ const isAuth = (req, res, next) => {
 
 router.get("/", isAuth, (req, res) => {
     const { user } = req;
-    res.render("student-card", { user });
+    res.render("sboard-form", { user });
 });
-
-
-
-router.get("/:id/edit", isAuth, (req, res) => {
-    const { id } = req.params;
-    User.findById(id)
-        .then(user => {
-            res.render("profile-form", { user });
-        })
-        .catch(err => {
-            res.render("profile-form", { err });
-        });
-});
-
 
 router.post("/:id/edit", isAuth, helpers.isAuth, uploader.single("image"), (req, res) => {
     const { id: _id } = req.params;
@@ -43,7 +29,7 @@ router.post("/:id/edit", isAuth, helpers.isAuth, uploader.single("image"), (req,
             res.redirect("/student");
         })
         .catch(err => {
-            res.render("profile-form", { err });
+            res.render("sboard-form", { err });
         });
 });
 

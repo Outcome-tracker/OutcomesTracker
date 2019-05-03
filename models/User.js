@@ -48,6 +48,7 @@ const userSchema = new Schema(
         squad: {
             type: String
         },
+        sboard: {},
 
         displayName: String
     },
