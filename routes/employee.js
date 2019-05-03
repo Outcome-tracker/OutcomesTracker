@@ -10,7 +10,6 @@ const isAuth = (req, res, next) => {
 };
 
 
-
 function checkRoles(role) {
     return function(req, res, next) {
         if (req.isAuthenticated() && req.user.role === role) {
@@ -20,7 +19,6 @@ function checkRoles(role) {
         }
     };
 }
-
 
 
 router.get("/new", isAuth, checkRoles("OUTCOMESMANAGER"), (req, res) => {
