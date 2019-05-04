@@ -4,8 +4,7 @@
 
       <div class="uk-flex uk-flex-center uk-width-auto">
         <div class="">
-          <img src="http://ijcat.com/images/Users-Edit-user-icon_large.png" alt="" width="170"
-            height="170">
+          <img src="http://ijcat.com/images/Users-Edit-user-icon_large.png" alt="" width="170" height="170">
         </div>
       </div>
 
@@ -18,7 +17,7 @@
         <div class="uk-margin">
           <div class="uk-inline">
             <span class="uk-form-icon" uk-icon="icon: user"></span>
-            <input name="name" class="uk-input" type="text"  placeholder="Enter your name" value="{{user.name}}">
+            <input name="name" class="uk-input" type="text" placeholder="Enter your name" value="{{user.name}}">
           </div>
         </div>
 
@@ -26,7 +25,8 @@
         <div class="uk-margin">
           <div class="uk-inline">
             <span class="uk-form-icon" uk-icon="icon: user"></span>
-            <input name="lastname" class="uk-input" type="text" placeholder="Enter your lastname" value="{{user.lastname}}">
+            <input name="lastname" class="uk-input" type="text" placeholder="Enter your lastname"
+              value="{{user.lastname}}">
           </div>
         </div>
 
@@ -34,7 +34,8 @@
         <div class="uk-margin">
           <div class="uk-inline">
             <span class="uk-form-icon" uk-icon="icon: mail"></span>
-            <input disabled name="email" class="uk-input" type="email" placeholder="Enter your lastname" value="{{user.email}}">
+            <input disabled name="email" class="uk-input" type="email" placeholder="Enter your lastname"
+              value="{{user.email}}">
           </div>
         </div>
 
@@ -50,17 +51,17 @@
         </div>
 
 
-          {{#if err.message}}
-          <div class="uk-alert-danger uk-width-1-3 uk-margin-auto" uk-alert>
-            <p>{{err.message}}</p>
-          </div>
-          {{/if}}
+        {{#if err.message}}
+        <div class="uk-alert-danger uk-width-1-3 uk-margin-auto" uk-alert>
+          <p>{{err.message}}</p>
+        </div>
+        {{/if}}
 
-          <div class="uk-margin ">
-            <button class="uk-button uk-button-primary">
-              Update profile
-            </button>
-          </div>
+        <div class="uk-margin ">
+          <button class="uk-button uk-button-primary">
+            Update profile
+          </button>
+        </div>
 
       </form>
     </div>
