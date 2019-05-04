@@ -2,29 +2,70 @@
   <div class="uk-container">
 
     <form>
-      <fieldset class="uk-fieldset">
+      <div class="uk-grid-match" uk-grid>
+        <fieldset class="uk-fieldset">
 
-        <legend class="uk-legend">Find Student by Criteria</legend>
+          <div class=" uk-form-meddium uk-flex-inline uk-child-width-1-2@m">
+            <legend class="uk-legend">Find Student by Squad</legend>
 
-        <div class="uk-margin">
-          <select class="uk-select">
-            <option>Option 01</option>
-            <option>Option 02</option>
-            <option>Option 03</option>
-            <option>Option 04</option>
-            <option>Option 05</option>
-            <option>Option 06</option>
-          </select>
-        </div>
+            <div class="uk-margin">
+              <select class="uk-select">
+                <option>WDFT Jan 18</option>
+                <option>WDFT Apr 18</option>
+                <option>WDPT Apr 18</option>
+                <option>WDFT Jun 18</option>
+                <option>UXFT Jun 18</option>
+                <option>WDPT Jul 18</option>
+                <option>WDFT Ago 18</option>
+                <option>UXPT Sep 18</option>
+                <option>WDPT Oct 18</option>
+                <option>WDFT Oct 18</option>
+                <option>UXFT Oct 18</option>
+                <option>WDPT Jan 19</option>
+                <option>WDFT Jan 19</option>
+                <option>UXFT Feb 19</option>
+                <option>WDFT Mar 19</option>
+                <option>WDPT Apr 19</option>
+              </select>
+            </div>
 
-      </fieldset>
+          </div>
+
+          <div class="uk-child-width-1-2@m uk-flex-inline">
+            <legend class="uk-legend">Find Student by Status</legend>
+
+            <div class="uk-margin">
+              <select class="uk-select">
+                <option>Student</option>
+                <option>Did not graduate</option>
+                <option>MIA</option>
+                <option>Back to their job</option>
+                <option>Hired in-field</option>
+                <option>Full-time employee</option>
+                <option>Full-time apprenticeship</option>
+                <option>Entrepreneur</option>
+                <option>Ironhack Employee</option>
+                <option>Freelancer</option>
+                <option>Part-time position</option>
+                <option>Hired Out of field</option>
+                <option>Searching</option>
+                <option>Back to University</option>
+                <option>Not seeking a job</option>
+              </select>
+            </div>
+
+          </div>
+
+        </fieldset>
+      </div>
     </form>
+
 
     <div class="uk-margin"></div>
 
     <div class="uk-grid-match uk-child-width-1-4 uk-grid-small" uk-grid>
-      {{!-- {{#each properties as |property|}}
-      {{> propertyCard property }}
+      {{!-- {{#each students as |student|}}
+      {{ StudentCard student }}
       {{/each}} --}}
 
       <div class=" uk-flex-inline">
@@ -32,74 +73,88 @@
           <div class="uk-card-media-top student-media" style="background-image:url(images/DylanTorres.jpeg)">
           </div>
           <div class="uk-card-body">
-            <h3 class="uk-card-title">Media Top</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+            <h3 class="uk-card-title">Dylan Torres</h3>
+            <p>Squad: WDPT Jan 19</p>
+            <p>Status: Ironhack Employee</p>
+            <a href="/student">Student Card</a>
           </div>
         </div>
       </div>
 
       <div class=" uk-flex-inline">
         <div class="uk-card uk-card-default">
-          <div class="uk-card-media-top student-media" style="background-image:url(images/DylanTorres.jpeg)">
+          <div class="uk-card-media-top student-media" style="background-image:url(images/DSC_0278.JPG)">
           </div>
           <div class="uk-card-body">
-            <h3 class="uk-card-title">Media Top</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+            <h3 class="uk-card-title">Ximena Pérez</h3>
+            <p>Squad: WDPT Oct 18</p>
+            <p>Status: Student</p>
+            <a href="/student">Student Card</a>
           </div>
         </div>
       </div>
 
       <div class=" uk-flex-inline">
         <div class="uk-card uk-card-default">
-          <div class="uk-card-media-top student-media" style="background-image:url(images/DylanTorres.jpeg)">
+          <div class="uk-card-media-top student-media" style="background-image:url(images/DSC_0044.JPG)">
           </div>
           <div class="uk-card-body">
-            <h3 class="uk-card-title">Media Top</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+            <h3 class="uk-card-title">Gabriel González</h3>
+            <p>Squad: UXFT Jan 19</p>
+            <p>Status: Freelancer</p>
+            <a href="/student">Student Card</a>
           </div>
         </div>
       </div>
 
       <div class=" uk-flex-inline">
         <div class="uk-card uk-card-default">
-          <div class="uk-card-media-top student-media" style="background-image:url(images/DylanTorres.jpeg)">
+          <div class="uk-card-media-top student-media" style="background-image:url(images/DSC_0404.JPG)">
           </div>
           <div class="uk-card-body">
-            <h3 class="uk-card-title">Media Top</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+            <h3 class="uk-card-title">Adriana Jiménez</h3>
+            <p>Squad: UXFT May 19</p>
+            <p>Status: Searching</p>
+            <a href="/student">Student Card</a>
           </div>
         </div>
       </div>
 
       <div class=" uk-flex-inline">
         <div class="uk-card uk-card-default">
-          <div class="uk-card-media-top student-media" style="background-image:url(images/DylanTorres.jpeg)">
+          <div class="uk-card-media-top student-media" style="background-image:url(images/DSC_0472.JPG)">
           </div>
           <div class="uk-card-body">
-            <h3 class="uk-card-title">Media Top</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+            <h3 class="uk-card-title">Víctor Flores</h3>
+            <p>Squad: WDPT Jan 19</p>
+            <p>Status: Ironhack Employee</p>
+            <a href="/student">Student Card</a>
           </div>
         </div>
       </div>
 
       <div class=" uk-flex-inline">
         <div class="uk-card uk-card-default">
-          <div class="uk-card-media-top student-media" style="background-image:url(images/DylanTorres.jpeg)">
+          <div class="uk-card-media-top student-media" style="background-image:url(images/DSC_0504.JPG)">
           </div>
           <div class="uk-card-body">
-            <h3 class="uk-card-title">Media Top</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+            <h3 class="uk-card-title">Emmanuel Juárez</h3>
+            <p>Squad: WDFT Jun 18</p>
+            <p>Status: Ironhack Employee</p>
+            <a href="/student">Student Card</a>
           </div>
         </div>
       </div>
 
       <div class=" uk-flex-inline">
         <div class="uk-card uk-card-default">
-          <div class="uk-card-media-top student-media" style="background-image:url(images/DylanTorres.jpeg)">
+          <div class="uk-card-media-top student-media" style="background-image:url(images/IMG_1144.JPG)">
           </div>
           <div class="uk-card-body">
-            <h3 class="uk-card-title">Media Top</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+            <h3 class="uk-card-title">Aline Sánchez</h3>
+            <p>Squad: UXPT Jun 18</p>
+            <p>Status:Back to their job</p>
+            <a href="/student">Student Card</a>
           </div>
         </div>
       </div>
