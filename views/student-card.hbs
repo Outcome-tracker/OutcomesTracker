@@ -6,16 +6,25 @@
                     <h4>My Student Card</h4>
                     <div class="uk-flex uk-flex-left">
                         <div class="uk-card-media-top uk-width-1-1">
+
                             {{#if user.image}}
-                            <img src="{{user.image}}" alt="{{user.name}}">
+
+                            <img src="{{user.image}}" alt="{{user.name}}" uk-img>
+
                             {{else}}
+
                             <img class="uk-border-circle uk-padding-small" data-src="{{user.img}} " width="300"
                                 height="300" alt="profile-image" uk-img>
+
+
                             {{/if}}
-                            <div class="uk-card-body uk-width-1-1">
-                                <h5 class="uk-card-title uk-text-primary">{{user.name}} {{user.lastname}}</h5>
-                                <p>{{user.skill1}}</p>
-                                <div class="uk-align-center">
+
+                            <div class=" uk-flex uk-flex-column uk-width-1-1 uk-margin-small">
+                                    <div class="uk-flex uk-flex-column uk-width-1-1">
+                                <p class="uk-flex uk-text-large uk-text-primary uk-margin-small">{{user.name}} {{user.lastname}}</p>
+                                    </div>
+                                <p class="uk-flex uk-text-small uk-margin-lead">"{{user.skill1}}"</p>
+                                <div class="">
                                     <a href="" uk-icon="world" class="uk-padding-xsmall uk-link-text"
                                         value="{{user.skill18}}"></a>
                                     <a href="https://www.linkedin.com/in/dylan-torres-cruz-b41a59159/"
@@ -29,10 +38,10 @@
                                         value="{{user.skill22}}"></a>
                                 </div>
                             </div>
-                            <a class="uk-width-1-1 uk-button uk-button-primary uk-border-rounded uk-box-shadow-small uk-margin-small-top"
+                            <a class="uk-button uk-button-primary uk-border-rounded uk-box-shadow-small uk-margin-small"
                                 href="/sboard"> Edit your card</a>
-                            <div class="uk-margin">
-                                <a class="uk-link-text" href="/outcomes-view">Search Students</a> </div>
+                           
+                                <a class="uk-flex uk-flex-column uk-width-1-1 uk-margin-small" href="/outcomes-view">Search Students</a> 
                         </div>
                         <hr class="uk-divider-vertical">
 
