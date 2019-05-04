@@ -48,7 +48,33 @@ const userSchema = new Schema(
         squad: {
             type: String
         },
-        sboard: {},
+
+        skill1: String,
+        skill2: String,
+        skill3: String,
+        skill4: String,
+        skill5: String,
+        skill6: String,
+        skill7: String,
+        skill8: String,
+        skill9: String,
+        skill10: String,
+        skill11: String,
+        skill12: String,
+        skill13: String,
+        skill14: String,
+        skill15: String,
+        skill16: String,
+        skill17: String,
+        skill18: String,
+        skill19: String,
+        skill20: String,
+        skill21: String,
+        skill22: String,
+        skill23: String,
+        skill24: String,
+        skill25: String,
+
 
         displayName: String
     },

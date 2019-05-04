@@ -1,8 +1,12 @@
+ <form action="/sboard/{{user._id}}/edit" class="uk-text-center"
+          method="POST">
+
 <section>
   <div class="uk-grid uk-navbar-container">
     <div class="uk-width-2-3 uk-align-center">
       <div class="uk-card uk-card-default uk-padding uk-box-shadow-xlarge uk-background-muted">
         <form class="uk-form-stacked" action="/sboard/{{this._id}}/edit" method="POST">
+
           <h3>Complete Your Student Card</h3>
 
           <div class="uk-margin">
@@ -10,7 +14,7 @@
             <label class="uk-form-label" for="form-stacked-text">Share a quote that represents you</label>
             <div class="uk-form-controls">
               <input class="uk-input uk-border-rounded uk-box-shadow-small" id="form-stacked-text" type="text"
-                placeholder="Some text...">
+                placeholder="Some text..." value="{{user.skill1}}" name="skill1">
             </div>
           </div>
 
@@ -18,7 +22,7 @@
             <label class="uk-form-label" for="form-stacked-text">Why did you do Ironhack?</label>
             <div class="uk-form-controls">
               <input name="whatdo" class="uk-input uk-border-rounded uk-box-shadow-small" id="form-stacked-text"
-                type="text" placeholder="Some text...">
+                type="text" placeholder="Some text..." value="{{user.skill2}}" name="skill2">
             </div>
           </div>
 
@@ -26,26 +30,29 @@
             <label class="uk-form-label" for="form-stacked-text">What do you look for in company culture?</label>
             <div class="uk-form-controls">
               <input class="uk-input uk-border-rounded uk-box-shadow-small" id="form-stacked-text" type="text"
-                placeholder="Some text...">
+                placeholder="Some text..." value="{{user.skill3}}">
             </div>
           </div>
 
+          
+          
           <div class="uk-margin">
             <label class="uk-form-label" for="form-stacked-text">What would be your Superpower and why?</label>
             <div class="uk-form-controls">
               <input class="uk-input uk-border-rounded uk-box-shadow-small" id="form-stacked-text" type="text"
-                placeholder="Some text...">
+                placeholder="Some text..." value="{{user.kill4}}">
             </div>
           </div>
+
 
           <div class="uk-margin">
             <h4 class="uk-text-primary">MY PROJECTS</h4>
             <label class="uk-form-label" for="form-stacked-text">Project M1</label>
             <div class="uk-form-controls">
               <input class="uk-input uk-border-rounded uk-box-shadow-small" id="form-stacked-text" type="text"
-                placeholder="Describe your project">
+                placeholder="Describe your project" value= "{{user.kill5}}">
               <input class="uk-input uk-border-rounded uk-box-shadow-small" id="form-stacked-text" type="text"
-                placeholder="URL to Github, Portfolio ">
+                placeholder="URL to Github, Portfolio " value="{{user.kill6}}" >
             </div>
           </div>
 
@@ -53,9 +60,9 @@
             <label class="uk-form-label" for="form-stacked-text">Project M2</label>
             <div class="uk-form-controls">
               <input class="uk-input uk-border-rounded uk-box-shadow-small" id="form-stacked-text" type="text"
-                placeholder="Describe your project">
+                placeholder="Describe your project" value="{{user.kill7}}">
               <input class="uk-input uk-border-rounded uk-box-shadow-small" id="form-stacked-text" type="text"
-                placeholder="URL to Github, Portfolio ">
+                placeholder="URL to Github, Portfolio " value="{{user.kill8}}">
             </div>
           </div>
 
@@ -63,9 +70,9 @@
             <label class="uk-form-label" for="form-stacked-text">Project M3</label>
             <div class="uk-form-controls">
               <input class="uk-input uk-border-rounded uk-box-shadow-small" id="form-stacked-text" type="text"
-                placeholder="Describe your project">
+                placeholder="Describe your project" value="{{user.kill9}}">
               <input class="uk-input uk-border-rounded uk-box-shadow-small" id="form-stacked-text" type="text"
-                placeholder="URL to Github, Portfolio ">
+                placeholder="URL to Github, Portfolio " value="{{user.kill10}}">
             </div>
 
             <div class="uk-margin">
@@ -75,23 +82,23 @@
                 <div class="uk-child-width-1-5@m uk-grid-match" uk-grid>
                   <div class=" uk-flex-inline">
                     <input class="uk-input uk-border-rounded uk-box-shadow-small" id="form-stacked-text" type="text"
-                      placeholder="Some text...">
+                      placeholder="Some text..." value="{{user.kill11}}">
                   </div>
                   <div class=" uk-flex-inline">
                     <input class="uk-input uk-border-rounded uk-box-shadow-small" id="form-stacked-text" type="text"
-                      placeholder="Some text...">
+                      placeholder="Some text..." value="{{user.kill12}}">
                   </div>
                   <div class=" uk-flex-inline">
                     <input class="uk-input uk-border-rounded uk-box-shadow-small" id="form-stacked-text" type="text"
-                      placeholder="Some text...">
+                      placeholder="Some text..." value="{{user.kill13}}">
                   </div>
                   <div class=" uk-flex-inline">
                     <input class="uk-input uk-border-rounded uk-box-shadow-small" id="form-stacked-text" type="text"
-                      placeholder="Some text...">
+                      placeholder="Some text..." value="{{user.kill14}}">
                   </div>
                   <div class=" uk-flex-inline">
                     <input class="uk-input uk-border-rounded uk-box-shadow-small" id="form-stacked-text" type="text"
-                      placeholder="Some text...">
+                      placeholder="Some text..." value="{{user.kill15}}">
                   </div>
                 </div>
               </div>
@@ -104,23 +111,23 @@
                 <div class="uk-child-width-1-5@m uk-grid-match" uk-grid>
                   <div class=" uk-flex-inline">
                     <input class="uk-input uk-border-rounded uk-box-shadow-small" id="form-stacked-text" type="text"
-                      placeholder="Some text...">
+                      placeholder="Some text..." value="{{user.kill16}}">
                   </div>
                   <div class=" uk-flex-inline">
                     <input class="uk-input uk-border-rounded uk-box-shadow-small" id="form-stacked-text" type="text"
-                      placeholder="Some text...">
+                      placeholder="Some text..." value="{{user.kill17}}">
                   </div>
                   <div class=" uk-flex-inline">
                     <input class="uk-input uk-border-rounded uk-box-shadow-small" id="form-stacked-text" type="text"
-                      placeholder="Some text...">
+                      placeholder="Some text..." value="{{user.kill18}}">
                   </div>
                   <div class=" uk-flex-inline">
                     <input class="uk-input uk-border-rounded uk-box-shadow-small" id="form-stacked-text" type="text"
-                      placeholder="Some text...">
+                      placeholder="Some text..." value="{{user.kill19}}">
                   </div>
                   <div class=" uk-flex-inline">
                     <input class="uk-input uk-border-rounded uk-box-shadow-small" id="form-stacked-text" type="text"
-                      placeholder="Some text...">
+                      placeholder="Some text..." value="{{user.kill20}}">
                   </div>
                 </div>
               </div>
@@ -135,38 +142,38 @@
                   <div class=" uk-flex-inline">
                     <div class="uk-inline">
                       <span class="uk-form-icon" uk-icon="icon: world"></span>
-                      <input class="uk-input uk-border-rounded uk-box-shadow-small">
+                      <input class="uk-input uk-border-rounded uk-box-shadow-small" value="{{user.kill21}}">
                     </div>
                   </div>
                   <div class=" uk-flex-inline">
                     <div class="uk-inline">
                       <span class="uk-form-icon" uk-icon="icon: linkedin"></span>
-                      <input class="uk-input uk-border-rounded uk-box-shadow-small">
+                      <input class="uk-input uk-border-rounded uk-box-shadow-small" value="{{user.kill22}}">
                     </div>
                   </div>
                   <div class=" uk-flex-inline">
                     <div class="uk-inline">
                       <span class="uk-form-icon" uk-icon="icon: github"></span>
-                      <input class="uk-input uk-border-rounded uk-box-shadow-small">
+                      <input class="uk-input uk-border-rounded uk-box-shadow-small" value="{{user.kill23}}">
                     </div>
                   </div>
                   <div class=" uk-flex-inline">
                     <div class="uk-inline">
                       <span class="uk-form-icon" uk-icon="icon: behance"></span>
-                      <input class="uk-input uk-border-rounded uk-box-shadow-small">
+                      <input class="uk-input uk-border-rounded uk-box-shadow-small" value="{{user.kill24}}">
                     </div>
                   </div>
                   <div class=" uk-flex-inline">
                     <div class="uk-inline">
                       <span class="uk-form-icon" uk-icon="icon: user"></span>
-                      <input class="uk-input uk-border-rounded uk-box-shadow-small">
+                      <input class="uk-input uk-border-rounded uk-box-shadow-small" value="{{user.kill25}}">
                     </div>
                   </div>
 
                 </div>
               </div>
             </div>
-
+            <button type="submit"> SUBMIT </button>
         </form>
       </div>
     </div>

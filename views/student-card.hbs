@@ -14,24 +14,16 @@
                                 width="200" height="200" alt="profile-image" uk-img>
                             {{/if}}
                             <div class="uk-card-body">
-                                <h5 class="uk-card-title uk-text-primary">Nombre Apellido</h5>
-                                <p>This is a quote, This is a quote, This is a quote, This is a quote, This is a quote,
-                                    This
-                                    is
-                                    a
-                                    quote,This is a quote, This is a quote,.</p>
-                                <span uk-icon="world" class="uk-padding-xsmall"></span>
-                                <span uk-icon="linkedin" class="uk-padding-xsmall"></span>
-                                <span uk-icon="github" class="uk-padding-xsmall"></span>
-                                <span uk-icon="behance" class="uk-padding-xsmall"></span>
-                                <span uk-icon="user" class="uk-padding-xsmall"></span>
+                                <h5 class="uk-card-title uk-text-primary">{{user.name}} {{user.lastname}}</h5>
+                                <p>{{user.skill1}}</p>
+                                <span uk-icon="world" class="uk-padding-xsmall" value="{{user.skill18}}"></span>
+                                <span uk-icon="linkedin" class="uk-padding-xsmall" value="{{user.skill19}}"></span>
+                                <span uk-icon="github" class="uk-padding-xsmall" value="{{user.skill20}}"></span>
+                                <span uk-icon="behance" class="uk-padding-xsmall" value="{{user.skill21}}"></span>
+                                <span uk-icon="user" class="uk-padding-xsmall" value="{{user.skill22}}"></span>
 
                             </div>
-
-                            <button
-                                class="uk-width-1-1 uk-button uk-button-primary uk-border-rounded uk-box-shadow-small uk-margin-small-top">
-                                Edit Student Card
-                            </button>
+                            <a  class="uk-width-1-1 uk-button uk-button-primary uk-border-rounded uk-box-shadow-small uk-margin-small-top" href="/sboard"> Edit your card</a>
                             <div class="uk-margin">
                                 <a class="uk-link-text" href="/outcomes-view">Search Students</a> </div>
                         </div>
@@ -41,25 +33,34 @@
                             uk-container-expand>
                             <h5>ABOUT ME</h5>
                             <strong>Why did you do Ironhack?</strong>
-                            <li>here goes an input</li>
+                            <li>{{user.skill2}}</li>
                             <strong>What do you look for in company culture?</strong>
-                            <li>here goes an input</li>
+                            <li>{{user.skill3}}</li>
                             <strong>Superpower and why?</strong>
-                            <li>here goes an input</li>
+                            <li>{{user.skill4}}</li>
 
                             <h5>MY PROJECTS</h5>
                             <strong>Name of Project 1</strong>
-                            <li>Project description</li>
+                            <li>{{user.kill5}}</li>
                             <strong>Name of Project </strong>
-                            <li>Project description</li>
+                            <li>{{user.kill6}}</li>
                             <strong>Name of Project 1</strong>
-                            <li>Project description</li>
+                            <li>{{user.kill7}}</li>
 
                             <h5>MY SOFT SKILLS</h5>
-                            <li>Keywords</li>
+                            <li>{{user.kill8}}</li>
+                            <li>{{user.kill9}}</li>
+                            <li>{{user.kill10}}</li>
+                            <li>{{user.kill11}}</li>
+                            <li>{{user.kill12}}</li>
 
                             <h5>HARD SKILLS / TECHNOLOGIES</h5>
-                            <li>Keywords</li>
+                             <li>{{user.kill13}}</li>
+                            <li>{{user.kill13}}</li>
+                            <li>{{user.kill15}}</li>
+                            <li>{{user.kill16}}</li>
+                            <li>{{user.kill17}}</li>
+
                         </div>
                     </div>
                 </div>

@@ -17,14 +17,11 @@ router.get("/", isAuth, (req, res) => {
     res.render("sboard-form", { user });
 });
 
-router.post("/:id/edit", isAuth, helpers.isAuth, uploader.single("image"), (req, res) => {
+router.post("/:id/edit", isAuth, helpers.isAuth, (req, res) => {
     const { id: _id } = req.params;
-    const { email } = req.user;
-    //const { url: image } = req.files;
-    const img = req.file ? req.file.url : undefined;
-    const user = img ? {...req.body, img } : req.body
-    console.log('Que', user)
-    User.findOneAndUpdate({ _id, email }, { $set: user })
+    const user = req.body;
+    let skill1 = user.skill1;
+    User.findOneAndUpdate({ _id }, { $set: user })
         .then(() => {
             res.redirect("/student");
         })
