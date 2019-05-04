@@ -20,8 +20,17 @@ footer {
   background-color: #2d354c;
   color: white; }
 
+#text {
+  color: white; }
+
 a {
   color: #00b7ff; }
+
+#block {
+  background-color: #77c0bc; }
+
+#checklist {
+  color: white; }
 
 .student-media {
   background-position: center;
