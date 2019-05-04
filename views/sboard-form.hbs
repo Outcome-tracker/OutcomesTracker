@@ -1,191 +1,195 @@
- <form action="/sboard/{{user._id}}/edit" class="uk-text-center"
-          method="POST">
+<form action="/sboard/{{user._id}}/edit" class="uk-text-center" method="POST">
 
-<section>
-  <div class="uk-grid uk-navbar-container">
-    <div class="uk-width-2-3 uk-align-center">
-      <div class="uk-card uk-card-default uk-padding uk-box-shadow-xlarge uk-background-muted">
-        <form class="uk-form-stacked" action="/sboard/{{this._id}}/edit" method="POST">
+  <section>
+    <div class="uk-grid uk-navbar-container">
+      <div class="uk-width-2-3 uk-align-center">
+        <div class="uk-card uk-card-default uk-padding uk-box-shadow-xlarge uk-background-muted">
+          <form class="uk-form-stacked" action="/sboard/{{this._id}}/edit" method="POST">
 
-          <h3>Complete Your Student Card</h3>
-
-          <div class="uk-margin">
-            <h4 class="uk-text-primary">ABOUT ME</h4>
-            <label class="uk-form-label" for="form-stacked-text">Share a quote that represents you</label>
-            <div class="uk-form-controls">
-              <input class="uk-input uk-border-rounded uk-box-shadow-small" id="form-stacked-text" type="text"
-                placeholder="Some text..." value="{{user.skill1}}" name="skill1">
-            </div>
-          </div>
-
-          <div class="uk-margin">
-            <label class="uk-form-label" for="form-stacked-text">Why did you do Ironhack?</label>
-            <div class="uk-form-controls">
-              <input class="uk-input uk-border-rounded uk-box-shadow-small" id="form-stacked-text" type="text" 
-                placeholder="Some text..." value="{{user.skill2}}" name="skill2">
-            </div>
-          </div>
-
-          <div class="uk-margin">
-            <label class="uk-form-label" for="form-stacked-text">What do you look for in company culture?</label>
-            <div class="uk-form-controls">
-              <input class="uk-input uk-border-rounded uk-box-shadow-small" id="form-stacked-text" type="text"
-                placeholder="Some text..." value="{{user.skill3}}" name="skill3">
-            </div>
-          </div>
-
-          
-          
-          <div class="uk-margin">
-            <label class="uk-form-label" for="form-stacked-text">What would be your Superpower and why?</label>
-            <div class="uk-form-controls">
-              <input class="uk-input uk-border-rounded uk-box-shadow-small" id="form-stacked-text" type="text"
-                placeholder="Some text..." value="{{user.skill4}}" name="skill4">
-            </div>
-          </div>
-
-
-          <div class="uk-margin">
-            <h4 class="uk-text-primary">MY PROJECTS</h4>
-            <label class="uk-form-label" for="form-stacked-text">Project M1</label>
-            <div class="uk-form-controls">
-
-              <input class="uk-input uk-border-rounded uk-box-shadow-small" id="form-stacked-text" type="text"
-                placeholder="Describe your project"  value="{{user.skill5}}" name="skill5">
- </div>
-
- <div class="uk-form-controls">
-              <input class="uk-input uk-border-rounded uk-box-shadow-small" id="form-stacked-text" type="text"
-                placeholder="URL to Github, Portfolio " value="{{user.skill6}}" name="skill6" >
-
-           </div>
-          </div>
-
-          <div class="uk-margin">
-            <label class="uk-form-label" for="form-stacked-text">Project M2</label>
-            <div class="uk-form-controls">
-
-              <input class="uk-input uk-border-rounded uk-box-shadow-small" id="form-stacked-text" type="text"
-                placeholder="Describe your project" value="{{user.skill7}}" name="skill7">
-
-              <input class="uk-input uk-border-rounded uk-box-shadow-small" id="form-stacked-text" type="text"
-                placeholder="URL to Github, Portfolio " value="{{user.skill8}}" name="skill8">
-
-            </div>
-          </div>
-
-          <div class="uk-margin">
-            <label class="uk-form-label" for="form-stacked-text">Project M3</label>
-            <div class="uk-form-controls">
-
-              <input class="uk-input uk-border-rounded uk-box-shadow-small" id="form-stacked-text" type="text"
-                placeholder="Describe your project" value="{{user.skill9}}" name="skill9">
-              <input class="uk-input uk-border-rounded uk-box-shadow-small" id="form-stacked-text" type="text"
-                placeholder="URL to Github, Portfolio " value="{{user.skill10}}" name="skill10">
-
-            </div>
+            <h3>Complete Your Student Card</h3>
 
             <div class="uk-margin">
-              <h4 class="uk-text-primary">MY SOFT SKILLS</h4>
-              <label class="uk-form-label" for="form-stacked-text">List your top five skills</label>
+              <h4 class="uk-text-primary">ABOUT ME</h4>
+              <label class="uk-form-label" for="form-stacked-text">Share a quote that represents you</label>
               <div class="uk-form-controls">
-                <div class="uk-child-width-1-5@m uk-grid-match" uk-grid>
-                  <div class=" uk-flex-inline">
-                    <input class="uk-input uk-border-rounded uk-box-shadow-small" id="form-stacked-text" type="text"
-                      placeholder="Some text..." value="{{user.skill11}}" name="skill11" name="skill11">
-                  </div>
-                  <div class=" uk-flex-inline">
-                    <input class="uk-input uk-border-rounded uk-box-shadow-small" id="form-stacked-text" type="text"
-                      placeholder="Some text..." value="{{user.skill12}}" name="skill12">
-                  </div>
-                  <div class=" uk-flex-inline">
-                    <input class="uk-input uk-border-rounded uk-box-shadow-small" id="form-stacked-text" type="text"
-                      placeholder="Some text..." value="{{user.skill13}}" name="skill13">
-                  </div>
-                  <div class=" uk-flex-inline">
-                    <input class="uk-input uk-border-rounded uk-box-shadow-small" id="form-stacked-text" type="text"
-                      placeholder="Some text..." value="{{user.skill14}}" name="skill14">
-                  </div>
-                  <div class=" uk-flex-inline">
-                    <input class="uk-input uk-border-rounded uk-box-shadow-small" id="form-stacked-text" type="text"
-                      placeholder="Some text..." value="{{user.skill15}}" name="skill15">
-                  </div>
-                </div>
+                <input class="uk-input uk-border-rounded uk-box-shadow-small" id="form-stacked-text" type="text"
+                  placeholder="Some text..." value="{{user.skill1}}" name="skill1">
               </div>
             </div>
 
             <div class="uk-margin">
-              <h4 class="uk-text-primary">ADITIONAL HARD SKILLS</h4>
-              <label class="uk-form-label" for="form-stacked-text">List your top five hard skills</label>
+              <label class="uk-form-label" for="form-stacked-text">Why did you do Ironhack?</label>
               <div class="uk-form-controls">
-                <div class="uk-child-width-1-5@m uk-grid-match" uk-grid>
-                  <div class=" uk-flex-inline">
-                    <input class="uk-input uk-border-rounded uk-box-shadow-small" id="form-stacked-text" type="text"
-                      placeholder="Some text..." value="{{user.skill16}}" name="skill16">
-                  </div>
-                  <div class=" uk-flex-inline">
-                    <input class="uk-input uk-border-rounded uk-box-shadow-small" id="form-stacked-text" type="text"
-                      placeholder="Some text..." value="{{user.skill17}}" name="skill17">
-                  </div>
-                  <div class=" uk-flex-inline">
-                    <input class="uk-input uk-border-rounded uk-box-shadow-small" id="form-stacked-text" type="text"
-                      placeholder="Some text..." value="{{user.skill18}}" name="skill18">
-                  </div>
-                  <div class=" uk-flex-inline">
-                    <input class="uk-input uk-border-rounded uk-box-shadow-small" id="form-stacked-text" type="text"
-                      placeholder="Some text..." value="{{user.skill19}}" name="skill19">
-                  </div>
-                  <div class=" uk-flex-inline">
-                    <input class="uk-input uk-border-rounded uk-box-shadow-small" id="form-stacked-text" type="text"
-                      placeholder="Some text..." value="{{user.skill20}}" name="skill20">
-                  </div>
-                </div>
+                <input class="uk-input uk-border-rounded uk-box-shadow-small" id="form-stacked-text" type="text"
+                  placeholder="Some text..." value="{{user.skill2}}" name="skill2">
               </div>
             </div>
 
             <div class="uk-margin">
-              <h4 class="uk-text-primary">SOCIAL MEDIA</h4>
-              <label class="uk-form-label" for="form-stacked-text">Link your Social Media</label>
+              <label class="uk-form-label" for="form-stacked-text">What do you look for in company culture?</label>
               <div class="uk-form-controls">
-                <div class="uk-child-width-1-5@m uk-grid-match" uk-grid>
-
-                  <div class=" uk-flex-inline">
-                    <div class="uk-inline">
-                      <span class="uk-form-icon" uk-icon="icon: world"></span>
-                      <input class="uk-input uk-border-rounded uk-box-shadow-small" value="{{user.skill21}}" name="skill21">
-                    </div>
-                  </div>
-                  <div class=" uk-flex-inline">
-                    <div class="uk-inline">
-                      <span class="uk-form-icon" uk-icon="icon: linkedin"></span>
-                      <input class="uk-input uk-border-rounded uk-box-shadow-small" value="{{user.skill22}}" name="skill22">
-                    </div>
-                  </div>
-                  <div class=" uk-flex-inline">
-                    <div class="uk-inline">
-                      <span class="uk-form-icon" uk-icon="icon: github"></span>
-                      <input class="uk-input uk-border-rounded uk-box-shadow-small" value="{{user.skill23}}" name="skill23">
-                    </div>
-                  </div>
-                  <div class=" uk-flex-inline">
-                    <div class="uk-inline">
-                      <span class="uk-form-icon" uk-icon="icon: behance"></span>
-                      <input class="uk-input uk-border-rounded uk-box-shadow-small" value="{{user.skill24}}" name="skill24">
-                    </div>
-                  </div>
-                  <div class=" uk-flex-inline">
-                    <div class="uk-inline">
-                      <span class="uk-form-icon" uk-icon="icon: user"></span>
-                      <input class="uk-input uk-border-rounded uk-box-shadow-small" value="{{user.skill25}}" name="skill25">
-                    </div>
-                  </div>
-
-                </div>
+                <input class="uk-input uk-border-rounded uk-box-shadow-small" id="form-stacked-text" type="text"
+                  placeholder="Some text..." value="{{user.skill3}}" name="skill3">
               </div>
             </div>
-            <button type="submit"> SUBMIT </button>
-        </form>
+
+
+
+            <div class="uk-margin">
+              <label class="uk-form-label" for="form-stacked-text">What would be your Superpower and why?</label>
+              <div class="uk-form-controls">
+                <input class="uk-input uk-border-rounded uk-box-shadow-small" id="form-stacked-text" type="text"
+                  placeholder="Some text..." value="{{user.skill4}}" name="skill4">
+              </div>
+            </div>
+
+
+            <div class="uk-margin">
+              <h4 class="uk-text-primary">MY PROJECTS</h4>
+              <label class="uk-form-label" for="form-stacked-text">Project M1</label>
+              <div class="uk-form-controls">
+
+                <input class="uk-input uk-border-rounded uk-box-shadow-small" id="form-stacked-text" type="text"
+                  placeholder="Describe your project" value="{{user.skill5}}" name="skill5">
+              </div>
+
+              <div class="uk-form-controls">
+                <input class="uk-input uk-border-rounded uk-box-shadow-small" id="form-stacked-text" type="text"
+                  placeholder="URL to Github, Portfolio " value="{{user.skill6}}" name="skill6">
+
+              </div>
+            </div>
+
+            <div class="uk-margin">
+              <label class="uk-form-label" for="form-stacked-text">Project M2</label>
+              <div class="uk-form-controls">
+
+                <input class="uk-input uk-border-rounded uk-box-shadow-small" id="form-stacked-text" type="text"
+                  placeholder="Describe your project" value="{{user.skill7}}" name="skill7">
+
+                <input class="uk-input uk-border-rounded uk-box-shadow-small" id="form-stacked-text" type="text"
+                  placeholder="URL to Github, Portfolio " value="{{user.skill8}}" name="skill8">
+
+              </div>
+            </div>
+
+            <div class="uk-margin">
+              <label class="uk-form-label" for="form-stacked-text">Project M3</label>
+              <div class="uk-form-controls">
+
+                <input class="uk-input uk-border-rounded uk-box-shadow-small" id="form-stacked-text" type="text"
+                  placeholder="Describe your project" value="{{user.skill9}}" name="skill9">
+                <input class="uk-input uk-border-rounded uk-box-shadow-small" id="form-stacked-text" type="text"
+                  placeholder="URL to Github, Portfolio " value="{{user.skill10}}" name="skill10">
+
+              </div>
+
+              <div class="uk-margin">
+                <h4 class="uk-text-primary">MY SOFT SKILLS</h4>
+                <label class="uk-form-label" for="form-stacked-text">List your top five skills</label>
+                <div class="uk-form-controls">
+                  <div class="uk-child-width-1-5@m uk-grid-match" uk-grid>
+                    <div class=" uk-flex-inline">
+                      <input class="uk-input uk-border-rounded uk-box-shadow-small" id="form-stacked-text" type="text"
+                        placeholder="Some text..." value="{{user.skill11}}" name="skill11" name="skill11">
+                    </div>
+                    <div class=" uk-flex-inline">
+                      <input class="uk-input uk-border-rounded uk-box-shadow-small" id="form-stacked-text" type="text"
+                        placeholder="Some text..." value="{{user.skill12}}" name="skill12">
+                    </div>
+                    <div class=" uk-flex-inline">
+                      <input class="uk-input uk-border-rounded uk-box-shadow-small" id="form-stacked-text" type="text"
+                        placeholder="Some text..." value="{{user.skill13}}" name="skill13">
+                    </div>
+                    <div class=" uk-flex-inline">
+                      <input class="uk-input uk-border-rounded uk-box-shadow-small" id="form-stacked-text" type="text"
+                        placeholder="Some text..." value="{{user.skill14}}" name="skill14">
+                    </div>
+                    <div class=" uk-flex-inline">
+                      <input class="uk-input uk-border-rounded uk-box-shadow-small" id="form-stacked-text" type="text"
+                        placeholder="Some text..." value="{{user.skill15}}" name="skill15">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="uk-margin">
+                <h4 class="uk-text-primary">ADITIONAL HARD SKILLS</h4>
+                <label class="uk-form-label" for="form-stacked-text">List your top five hard skills</label>
+                <div class="uk-form-controls">
+                  <div class="uk-child-width-1-5@m uk-grid-match" uk-grid>
+                    <div class=" uk-flex-inline">
+                      <input class="uk-input uk-border-rounded uk-box-shadow-small" id="form-stacked-text" type="text"
+                        placeholder="Some text..." value="{{user.skill16}}" name="skill16">
+                    </div>
+                    <div class=" uk-flex-inline">
+                      <input class="uk-input uk-border-rounded uk-box-shadow-small" id="form-stacked-text" type="text"
+                        placeholder="Some text..." value="{{user.skill17}}" name="skill17">
+                    </div>
+                    <div class=" uk-flex-inline">
+                      <input class="uk-input uk-border-rounded uk-box-shadow-small" id="form-stacked-text" type="text"
+                        placeholder="Some text..." value="{{user.skill18}}" name="skill18">
+                    </div>
+                    <div class=" uk-flex-inline">
+                      <input class="uk-input uk-border-rounded uk-box-shadow-small" id="form-stacked-text" type="text"
+                        placeholder="Some text..." value="{{user.skill19}}" name="skill19">
+                    </div>
+                    <div class=" uk-flex-inline">
+                      <input class="uk-input uk-border-rounded uk-box-shadow-small" id="form-stacked-text" type="text"
+                        placeholder="Some text..." value="{{user.skill20}}" name="skill20">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="uk-margin">
+                <h4 class="uk-text-primary">SOCIAL MEDIA</h4>
+                <label class="uk-form-label" for="form-stacked-text">Link your Social Media</label>
+                <div class="uk-form-controls">
+                  <div class="uk-child-width-1-5@m uk-grid-match" uk-grid>
+
+                    <div class=" uk-flex-inline">
+                      <div class="uk-inline">
+                        <span class="uk-form-icon" uk-icon="icon: world"></span>
+                        <input class="uk-input uk-border-rounded uk-box-shadow-small" value="{{user.skill21}}"
+                          name="skill21">
+                      </div>
+                    </div>
+                    <div class=" uk-flex-inline">
+                      <div class="uk-inline">
+                        <span class="uk-form-icon" uk-icon="icon: linkedin"></span>
+                        <input class="uk-input uk-border-rounded uk-box-shadow-small" value="{{user.skill22}}"
+                          name="skill22">
+                      </div>
+                    </div>
+                    <div class=" uk-flex-inline">
+                      <div class="uk-inline">
+                        <span class="uk-form-icon" uk-icon="icon: github"></span>
+                        <input class="uk-input uk-border-rounded uk-box-shadow-small" value="{{user.skill23}}"
+                          name="skill23">
+                      </div>
+                    </div>
+                    <div class=" uk-flex-inline">
+                      <div class="uk-inline">
+                        <span class="uk-form-icon" uk-icon="icon: behance"></span>
+                        <input class="uk-input uk-border-rounded uk-box-shadow-small" value="{{user.skill24}}"
+                          name="skill24">
+                      </div>
+                    </div>
+                    <div class=" uk-flex-inline">
+                      <div class="uk-inline">
+                        <span class="uk-form-icon" uk-icon="icon: user"></span>
+                        <input class="uk-input uk-border-rounded uk-box-shadow-small" value="{{user.skill25}}"
+                          name="skill25">
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+              <button type="submit"> SUBMIT </button>
+          </form>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
