@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const Employee = require("../models/Employee");
+const User = require("../models/User");
 
 const isAuth = (req, res, next) => {
     if (req.isAuthenticated()) {
@@ -20,30 +20,35 @@ function checkRoles(role) {
     };
 }
 
-router.get("/new", isAuth, checkRoles("OUTCOMESMANAGER"), (req, res) => {
-    res.render("employee-form");
+router.get("/new", (req, res) => {
+    res.render("sboard-form");
 });
 
 router.post("/new", (req, res) => {
-    Employee.create(req.body)
+    console.log(req.body)
+    User.create(req.body)
         .then(() => {
-            res.redirect("/outcomesmanager");
-        });
+            console.log("entro")
+
+        }).catch(e =>
+            console.log("error:", e)
+        );
 });
 
 router.get('/:id/edit', (req, res) => {
     let { id } = req.params;
-    Employee.findById(id)
-        .then(empleado => {
-            res.render('employee-form', empleado);
+    User.findById(id)
+        .then(alumno => {
+            console.log('alumno', alumno)
+            res.render('sboard-form', alumno);
         });
 });
 
 router.post('/:id/edit', (req, res) => {
     let { id } = req.params;
-    Employee.findByIdAndUpdate(id, { $set: {...req.body } })
-        .then(empleado => {
-            res.redirect('/outcomesmanager');
+    User.findByIdAndUpdate(id, { $set: {...req.body } })
+        .then(user => {
+            res.status(200)
         })
         .catch(err => {
             console.log(err);
@@ -52,9 +57,9 @@ router.post('/:id/edit', (req, res) => {
 
 router.get('/:id/delete', (req, res) => {
     let { id } = req.params;
-    Employee.findByIdAndDelete(id)
+    User.findByIdAndDelete(id)
         .then(() => {
-            res.redirect('/outcomesmanager');
+            res.status(200)
         });
 });
 

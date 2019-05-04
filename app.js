@@ -97,13 +97,14 @@ const auth = require('./routes/auth');
 const profile = require('./routes/profile');
 const student = require("./routes/student-board");
 const sboard = require("./routes/sboard-form");
-
+const lead = require("./routes/lead");
 
 app.use('/', index);
 app.use('/auth', auth);
 app.use('/profile', profile);
 app.use("/student", student);
 app.use("/sboard", sboard);
+app.use('/lead', lead)
 
 
 
