@@ -10,17 +10,17 @@
                             <img src="{{user.image}}" alt="{{user.name}}">
                             {{else}}
                             <img class="uk-border-circle uk-padding-small"
-                                data-src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"
+                                data-src="{{user.img}} "
                                 width="200" height="200" alt="profile-image" uk-img>
                             {{/if}}
                             <div class="uk-card-body">
                                 <h5 class="uk-card-title uk-text-primary">{{user.name}} {{user.lastname}}</h5>
                                 <p>{{user.skill1}}</p>
-                                <span uk-icon="world" class="uk-padding-xsmall" value="{{user.skill18}}"></span>
-                                <span uk-icon="linkedin" class="uk-padding-xsmall" value="{{user.skill19}}"></span>
-                                <span uk-icon="github" class="uk-padding-xsmall" value="{{user.skill20}}"></span>
-                                <span uk-icon="behance" class="uk-padding-xsmall" value="{{user.skill21}}"></span>
-                                <span uk-icon="user" class="uk-padding-xsmall" value="{{user.skill22}}"></span>
+                                <a href=""uk-icon="world" class="uk-padding-xsmall uk-link-text"  value="{{user.skill18}}"></a>
+                                <a href="https://www.linkedin.com/in/dylan-torres-cruz-b41a59159/" uk-icon="linkedin" class="uk-padding-xsmall uk-link-text" value="{{user.skill19}}"></a>
+                                <a href="" uk-icon="github" class="uk-padding-xsmall uk-link-text" value="{{user.skill20}}"></a>
+                                <a href="" uk-icon="behance" class="uk-padding-xsmall uk-link-text" value="{{user.skill21}}"></a>
+                                <a href="" uk-icon="user" class="uk-padding-xsmall uk-link-text" value="{{user.skill22}}"></a>
 
                             </div>
                             <a  class="uk-width-1-1 uk-button uk-button-primary uk-border-rounded uk-box-shadow-small uk-margin-small-top" href="/sboard"> Edit your card</a>

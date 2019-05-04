@@ -20,7 +20,7 @@ router.get("/", isAuth, (req, res) => {
 router.post("/:id/edit", isAuth, helpers.isAuth, (req, res) => {
     const { id: _id } = req.params;
     const user = req.body;
-    let skill1 = user.skill1;
+    //let skill1 = user.skill1;
     User.findOneAndUpdate({ _id }, { $set: user })
         .then(() => {
             res.redirect("/student");
